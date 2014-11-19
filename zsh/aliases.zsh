@@ -54,6 +54,9 @@ alias ar='source $yadr/zsh/aliases.zsh'  #alias reload
 #   alias vim="mvim -v"
 # fi
 
+# mimic vim functions
+alias :q='exit'
+
 # vimrc editing
 alias ve='vim ~/.vimrc'
 
