@@ -1,2 +1,2 @@
 # prompt skwp
-prompt paradox
+prompt mrap
