@@ -45,6 +45,8 @@ alias ve='vim ~/.vimrc'
 # zsh profile editing
 alias ze='vim ~/.zshrc'
 alias zr='source ~/.zshrc'
+# vim bundle install
+alias vim-bundle-install='source ~/.zshrc && vim +BundleInstall +qall'
 
 # Git Aliases
 alias gs='git status'
