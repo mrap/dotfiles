@@ -11,3 +11,6 @@ endif
 if filereadable(expand("~/.vimrc.after"))
   source ~/.vimrc.after
 endif
+
+" italic comments
+highlight Comment cterm=italic

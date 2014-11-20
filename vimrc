@@ -107,7 +107,6 @@ set sidescroll=1
 so ~/.yadr/vim/settings.vim
 nnoremap ; :
 set showbreak=↪
-set cursorline
 
 " Per project vim settings
 " Source: http://www.ilker.de/specific-vim-settings-per-project.html
