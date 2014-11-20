@@ -1,2 +1,2 @@
 # prompt skwp
-prompt kylewest
+prompt paradox
