@@ -33,6 +33,9 @@ set t_Co=256
 " colorscheme Monokai
 " highlight ColorColumn ctermbg=7
 " highlight ColorColumn guibg=Gray
+" ================ Hemisu Colorscheme ========================
+" set background=dark
+" colorscheme hemisu
 " ================ Pencil Colorscheme ========================
 colorscheme pencil
 set background=dark
