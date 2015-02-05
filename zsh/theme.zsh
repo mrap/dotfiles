@@ -1,2 +1,2 @@
 # prompt skwp
-prompt mrap
+prompt sorin
