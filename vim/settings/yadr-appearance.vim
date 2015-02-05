@@ -4,8 +4,8 @@
 set t_Co=256
 " ================ Solarized Colorscheme ========================
 " http://ethanschoonover.com/solarized/vim-colors-solarized
-" colorscheme solarized
-" set background=dark
+colorscheme solarized
+set background=light
 " ================ Railscasts Colorscheme ========================
 " set background=dark
 " colorscheme base16-default
@@ -37,21 +37,15 @@ set t_Co=256
 " set background=dark
 " colorscheme hemisu
 " ================ Pencil Colorscheme ========================
-colorscheme pencil
-set background=dark
-let g:pencil_higher_contrast_ui = 0   " 0=low (def), 1=high"
-let g:pencil_terminal_italics = 1
-let g:airline_theme = 'pencil'
-hi LineNr ctermfg=Gray
-hi Normal ctermbg=None
+" colorscheme pencil
+" set background=dark
+" let g:pencil_higher_contrast_ui = 0   " 0=low (def), 1=high"
+" let g:pencil_terminal_italics = 1
+" let g:airline_theme = 'pencil'
+" hi LineNr ctermfg=Gray
+" hi Normal ctermbg=None
 
 if has("gui_running")
-  "tell the term has 256 colors
-  set t_Co=256
-  " Enable solarized
-  " colorscheme solarized
-  " set background=dark
-
   " Show tab number (useful for Cmd-1, Cmd-2.. mapping)
   " For some reason this doesn't work as a regular set command,
   " (the numbers don't show up) so I made it a VimEnter event
@@ -69,9 +63,9 @@ else
   let g:CSApprox_loaded = 1
 
   " For people using a terminal that is not Solarized
-  " if exists("g:yadr_using_unsolarized_terminal")
-  "   let g:solarized_termcolors=256
-  "   let g:solarized_termtrans=1
-  " end
+  if exists("g:yadr_using_unsolarized_terminal")
+    let g:solarized_termcolors=256
+    let g:solarized_termtrans=1
+  end
 endif
 
