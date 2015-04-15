@@ -12,4 +12,6 @@ Bundle "croaky/vim-colors-github"
 Bundle "reedes/vim-colors-pencil"
 Bundle "bling/vim-airline"
 Bundle "edkolev/tmuxline.vim"
-Bundle "godlygeek/csapprox"
+
+" Required for Gblame in terminal vim
+Bundle "godlygeek/csapprox.git"
