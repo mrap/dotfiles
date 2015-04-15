@@ -107,6 +107,7 @@ set sidescroll=1
 so ~/.yadr/vim/settings.vim
 nnoremap ; :
 set showbreak=↪
+highlight Comment cterm=italic
 
 " Per project vim settings
 " Source: http://www.ilker.de/specific-vim-settings-per-project.html
