@@ -10,7 +10,6 @@ Bundle "noahfrederick/vim-hemisu"
 Bundle "jaxbot/semantic-highlight.vim"
 Bundle "croaky/vim-colors-github"
 Bundle "reedes/vim-colors-pencil"
-Bundle "bling/vim-airline"
 Bundle "edkolev/tmuxline.vim"
 
 " Required for Gblame in terminal vim
