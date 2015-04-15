@@ -14,3 +14,5 @@ pbcopyfile () {
     echo "Copied contents of $1 to clipboard!"
   fi
 }
+
+alias bcask='brew cask'
