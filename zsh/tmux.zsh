@@ -1,3 +1,7 @@
+# Always have a tmux server
+if ! command tmux info &> /dev/null; then
+  command tmux new -s default -d
+fi
 
 # Improves tmux command so that `tmux` doesn't
 # implicitly create and join an anonymous session.
