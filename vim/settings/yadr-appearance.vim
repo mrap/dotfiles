@@ -1,11 +1,8 @@
 " Make it beautiful - colors and fonts
 
 
-set t_Co=256
 " ================ Solarized Colorscheme ========================
 " http://ethanschoonover.com/solarized/vim-colors-solarized
-colorscheme solarized
-set background=light
 " ================ Railscasts Colorscheme ========================
 " set background=dark
 " colorscheme base16-default
@@ -63,9 +60,11 @@ else
   let g:CSApprox_loaded = 1
 
   " For people using a terminal that is not Solarized
-  if exists("g:yadr_using_unsolarized_terminal")
-    let g:solarized_termcolors=256
-    let g:solarized_termtrans=1
-  end
+  let g:solarized_termcolors=256
+  let g:solarized_termtrans=1
 endif
+
+set t_Co=256
+colorscheme solarized
+set background=light
 
