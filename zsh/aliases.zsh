@@ -24,6 +24,11 @@ alias psa="ps aux"
 alias psg="ps aux | grep "
 alias psr='ps aux | grep ruby'
 
+# PS search with table header
+psas() {
+  ps aux | egrep "(PID|$@)"
+}
+
 # Moving around
 alias cdb='cd -'
 alias cls='clear;ls'
