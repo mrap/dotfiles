@@ -47,11 +47,15 @@
 
   # log
   oneline = log --graph --relative-date
+  oneline-branches = log --graph --relative-date --all
+  twoline-branches = log --graph --abbrev-commit --relative-date --decorate --format=format:'%C(green)%D %C(yellow)%h %C(reset)%cr %C(cyan)[%an]%n%C(blue)%s%C(reset)'
   twoline = log --pretty=format:\" %Cblue%s%n %C(auto)%cr | %h | %cn%Creset%n\"
   changes = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\" --name-status
   short = log --pretty=format:\"%h %cr %cn %Cgreen%s%Creset\"
   simple = log --pretty=format:\" * %s\"
   shortnocolor = log --pretty=format:\"%h %cr %cn %s\"
+  la = !"git oneline-branches"
+  la2 = !"git twoline-branches"
 
   # pull
   pl = pull                         # pull
