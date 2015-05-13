@@ -124,6 +124,11 @@
   # instead of a/b/c/d as prefixes for patches
   mnemonicprefix = true
 	algorithm = patience
+  submodule = log
+[fetch]
+  recurseSubmodules = on-demand
+[status]
+  submoduleSummary = true
 [rerere]
   # Remember my merges
   # http://gitfu.wordpress.com/2008/04/20/git-rerere-rereremember-what-you-did-last-time/
