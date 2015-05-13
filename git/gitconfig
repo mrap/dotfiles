@@ -56,6 +56,7 @@
   shortnocolor = log --pretty=format:\"%h %cr %cn %s\"
   la = !"git oneline-branches"
   la2 = !"git twoline-branches"
+  log-not-pushed = log --branches --not --remotes
 
   # pull
   pl = pull                         # pull
