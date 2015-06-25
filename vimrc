@@ -122,3 +122,6 @@ set secure "disables from allowing exrc to execute shell commands
 " Command history filters like Up and Down
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+
+" No ESC delay when switching back to normal mode
+set ttimeoutlen=0
