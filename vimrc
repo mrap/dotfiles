@@ -118,3 +118,7 @@ highlight Comment cterm=italic
 " Source: http://www.ilker.de/specific-vim-settings-per-project.html
 set exrc "enable per project settings with .exrc
 set secure "disables from allowing exrc to execute shell commands
+
+" Command history filters like Up and Down
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
