@@ -26,6 +26,9 @@
   # branch
   b = branch -v                     # branch (verbose)
 
+  # clone
+  clo = clone
+
   # commit
   c = commit -m                     # commit with message
   ca = commit -am                   # commit all with message
