@@ -26,7 +26,7 @@ alias psr='ps aux | grep ruby'
 
 # PS search with table header
 psas() {
-  ps aux | egrep "(PID|$@)"
+  ps aux | egrep "(PID|$@)" | fgrep -v egrep
 }
 
 # Moving around
