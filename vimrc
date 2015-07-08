@@ -111,7 +111,7 @@ set smartcase       " ...unless we type a capital
 
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
-nnoremap ; :
+noremap <Space> :
 highlight Comment cterm=italic
 
 " Per project vim settings
