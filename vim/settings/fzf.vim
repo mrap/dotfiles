@@ -1,3 +1,5 @@
+set rtp+=/usr/local/Cellar/fzf/HEAD
+
 function! s:buflist()
   redir => ls
   silent ls
