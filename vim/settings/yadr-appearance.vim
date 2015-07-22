@@ -19,5 +19,6 @@ if has("gui_running")
     set guifont=Inconsolata\ XL:h17,Inconsolata:h20,Monaco:h17
   end
 else
-  colorscheme solarized
+  set t_Co=256
+  colorscheme PaperColor
 endif

@@ -10,6 +10,4 @@ Bundle "jaxbot/semantic-highlight.vim"
 Bundle "croaky/vim-colors-github"
 Bundle "reedes/vim-colors-pencil"
 Bundle "edkolev/tmuxline.vim"
-
-" Required for Gblame in terminal vim
-Bundle "godlygeek/csapprox.git"
+Bundle "NLKNguyen/papercolor-theme"
