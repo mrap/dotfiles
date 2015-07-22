@@ -1,6 +1,5 @@
 Bundle "chrisbra/color_highlight.git"
 Bundle "altercation/vim-colors-solarized"
-Bundle "itchyny/lightline.vim"
 Bundle "jby/tmux.vim.git"
 Bundle "morhetz/gruvbox"
 Bundle "xsunsmile/showmarks.git"
