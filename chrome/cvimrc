@@ -1,0 +1,32 @@
+let configpath = '/Users/mrap/.yadr/chrome/cvimrc'
+set localconfig
+
+" Settings
+
+set nodefaultnewtabpage
+set noautofocus
+set cncpcompletion
+set linkanimations
+set showtabindices
+set smoothscroll
+set hud
+
+let searchlimit = 20
+let searchengine stackoverflow = "http://stackoverflow.com/search?q="
+let searchalias s = "stackoverflow"
+let searchalias g = "google"
+
+" Colemak friendly
+let hintcharacters = 'arstdqwfpgzxcvb'
+
+" Mappings
+
+let mapleader = ","
+map <Space> :
+map <C-d> scrollPageDown
+map <C-u> scrollPageUp
+map ,b :buffer<Space>
+map ,h :help<CR>
+
+let vimcommand="mvim -f"
+imap <C-o> editWithVim
