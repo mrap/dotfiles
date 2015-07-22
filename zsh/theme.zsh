@@ -1,2 +1,0 @@
-# prompt skwp
-prompt sorin
