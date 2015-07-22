@@ -8,3 +8,6 @@ bindkey '^r' history-incremental-search-backward    # [Ctrl-r] - Search backward
 # emacs style
 bindkey '^a' beginning-of-line
 bindkey '^e' end-of-line
+
+# Reduce <ESC> lag from 0.4s (default) to 0.1 seconds
+export KEYTIMEOUT=1
