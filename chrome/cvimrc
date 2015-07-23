@@ -17,7 +17,7 @@ let searchalias s = "stackoverflow"
 let searchalias g = "google"
 
 " Colemak friendly
-let hintcharacters = 'arstdqwfpgzxcvb'
+let hintcharacters = 'arstneiowfpluy'
 
 " Mappings
 
