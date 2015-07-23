@@ -1,6 +1,8 @@
 # Vi Mode key bindings
 # http://dougblack.io/words/zsh-vi-mode.html
 
+export EDITOR='vim'
+
 bindkey -v
 
 bindkey '^P' up-history
