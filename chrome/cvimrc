@@ -28,5 +28,10 @@ map <C-u> scrollPageUp
 map ,b :buffer<Space>
 map ,h :help<CR>
 
+unmap T
+map T :tabnew google<Space>
+unmap O
+map O :open google<Space>
+
 let vimcommand="mvim -f"
 imap <C-o> editWithVim
