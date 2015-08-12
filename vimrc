@@ -125,3 +125,6 @@ cnoremap <C-n> <Down>
 
 " No ESC delay when switching back to normal mode
 set ttimeoutlen=0
+
+" Sane pasting from clipboard
+nmap <C-p> "+p
