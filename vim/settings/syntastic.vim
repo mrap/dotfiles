@@ -11,7 +11,9 @@ let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]"]
 "html warnings are passive
 let g:syntastic_mode_map = {'mode'              : 'active',
                           \ 'active_filetypes'  : [],
-                          \ 'passive_filetypes' : ['html'] }
+                          \ 'passive_filetypes' : [] }
+
+let g:syntastic_javascript_checkers = ['jsxhint']
 
 " I have no idea why this is not working, as it used to
 " be a part of syntastic code but was apparently removed

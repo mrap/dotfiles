@@ -23,4 +23,7 @@ Bundle "vim-scripts/Vim-R-plugin"
 Bundle "toyamarinyon/vim-swift"
 Bundle "derekwyatt/vim-fswitch"
 Bundle 'sheerun/vim-polyglot'
+Bundle 'mxw/vim-jsx'
+Bundle 'maksimr/vim-jsbeautify'
+Bundle 'einars/js-beautify'
 Bundle 'Valloric/MatchTagAlways'
