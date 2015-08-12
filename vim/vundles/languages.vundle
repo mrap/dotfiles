@@ -23,3 +23,4 @@ Bundle "vim-scripts/Vim-R-plugin"
 Bundle "toyamarinyon/vim-swift"
 Bundle "derekwyatt/vim-fswitch"
 Bundle 'sheerun/vim-polyglot'
+Bundle 'Valloric/MatchTagAlways'
