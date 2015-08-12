@@ -190,7 +190,7 @@ of plugins above to learn more.
  * `,K` - Grep the current word up to next exclamation point (useful for ruby foo! methods)
  * `Cmd-*` - highlight all occurrences of current word (similar to regular `*` except doesn't move)
  * `,hl` - toggle search highlight on and off
- * `,gg` or `,ag` - Grep command line, type between quotes. Uses Ag Silver Searcher.
+ * `,ag` - Grep command line, type between quotes. Uses Ag Silver Searcher.
  * `,gd` - Grep def (greps for 'def [function name]') when cursor is over the function name
  * `,gcf` - Grep Current File to find references to the current file
  * `//` - clear the search

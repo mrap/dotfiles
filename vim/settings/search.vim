@@ -22,10 +22,6 @@ nnoremap ,K viwf!:<C-U>execute "Ag " . GetVisual()<CR>
 "grep for 'def foo'
 nnoremap <silent> ,gd :Ag 'def <cword>'<CR>
 
-",gg = Grep! - using Ag the silver searcher
-" open up a grep line, with a quote started for the search
-nnoremap ,gg :Ag ""<left>
-
 "Grep Current Partial
 function! AgCurrentPartial()
   let l:fileNameWithoutExtension = expand('%:t:r')
