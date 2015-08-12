@@ -1,10 +1,10 @@
 " Make it beautiful - colors and fonts
 
-set background=dark
+set background=light
 set cursorline
 
 if has("gui_running")
-  colorscheme gotham
+  colorscheme scheakur
 
   " Show tab number (useful for Cmd-1, Cmd-2.. mapping)
   " For some reason this doesn't work as a regular set command,
@@ -20,5 +20,6 @@ if has("gui_running")
     set guifont=Inconsolata\ XL:h17,Inconsolata:h20,Monaco:h17
   end
 else
-  colorscheme gotham
+  set t_Co=256
+  colorscheme scheakur
 endif
