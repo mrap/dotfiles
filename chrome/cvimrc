@@ -35,3 +35,13 @@ map O :open google<Space>
 
 let vimcommand="mvim -f"
 imap <C-o> editWithVim
+
+" Yank current url without any params or anchors
+yankCurrentUrl() -> {{
+  var url = window.location.origin + window.location.pathname;
+  Clipboard.copy(url);
+  Status.setMessage(url);
+}}
+
+unmap yY
+map yY :call yankCurrentUrl<CR>
