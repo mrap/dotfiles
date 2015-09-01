@@ -5,3 +5,6 @@
 [submodule "keyboard"]
 	path = keyboard
 	url = git@github.com:mrap/keyboard.git
+[submodule "zsh/fshow"]
+	path = zsh/fshow
+	url = git@gist.github.com:f4fca918e937e6bf5bad.git
