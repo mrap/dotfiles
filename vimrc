@@ -125,7 +125,7 @@ cnoremap <C-n> <Down>
 set ttimeoutlen=0
 
 " Sane pasting from clipboard
-nmap <Leader>p "+p
+nmap <Leader>pp "+p
 
 " Keep working line in the center
 set scrolloff=999
