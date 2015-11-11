@@ -129,3 +129,6 @@ nmap <Leader>pp "+p
 
 " Keep working line in the center
 set scrolloff=999
+
+" K splits line (opposite of J)
+nnoremap K i<cr><esc>k$
