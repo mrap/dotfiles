@@ -4,7 +4,7 @@ set background=light
 set cursorline
 
 if has("gui_running")
-  colorscheme scheakur
+  colorscheme solarized
 
   " Show tab number (useful for Cmd-1, Cmd-2.. mapping)
   " For some reason this doesn't work as a regular set command,
@@ -21,5 +21,5 @@ if has("gui_running")
   end
 else
   set t_Co=256
-  colorscheme scheakur
+  colorscheme solarized
 endif
