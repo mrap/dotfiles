@@ -14,13 +14,13 @@ endfunction
 nnoremap <silent> <Leader>k :Ag <cword><CR>
 
 "grep visual selection
-vnoremap <C-K> :<C-U>execute "Ag " . GetVisual()<CR>
+vnoremap <silent> <Leader>k :<C-U>execute "Ag " . GetVisual()<CR>
 
 "grep current word up to the next exclamation point using ,K
-nnoremap ,K viwf!:<C-U>execute "Ag " . GetVisual()<CR>
+nnoremap <Leader>K viwf!:<C-U>execute "Ag " . GetVisual()<CR>
 
 "grep for 'def foo'
-nnoremap <silent> ,gd :Ag 'def <cword>'<CR>
+nnoremap <silent> <Leader>gd :Ag 'def <cword>'<CR>
 
 "Grep Current Partial
 function! AgCurrentPartial()
@@ -32,7 +32,7 @@ endfunction
 
 command! AgCurrentPartial call AgCurrentPartial()
 "
-nnoremap ,gcp :AgCurrentPartial<CR>
+nnoremap <Leader>gcp :AgCurrentPartial<CR>
 
 "Grep for usages of the current file
-nnoremap ,gcf :exec "Ag " . expand("%:t:r")<CR>
+nnoremap <Leader>gcf :exec "Ag " . expand("%:t:r")<CR>

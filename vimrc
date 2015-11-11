@@ -31,7 +31,7 @@ syntax on
 " That means all \x commands turn into ,x
 " The mapleader has to be set before vundle starts loading all 
 " the plugins.
-let mapleader=","
+let mapleader = "\<Space>"
 
 " =============== Vundle Initialization ===============
 " This loads all the plugins specified in ~/.vim/vundles.vim
@@ -111,8 +111,6 @@ set smartcase       " ...unless we type a capital
 
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
-noremap <Space> :
-highlight Comment cterm=italic
 
 " Per project vim settings
 " Source: http://www.ilker.de/specific-vim-settings-per-project.html

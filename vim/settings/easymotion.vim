@@ -1,3 +1,3 @@
+let g:EasyMotion_do_mapping=0
 let g:EasyMotion_keys='arstneiowfpluy' " colemak
-nmap ,<ESC> ,,w
-nmap ,<S-ESC> ,,b
+nmap <C-/> <Plug>(easymotion-bd-w)

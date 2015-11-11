@@ -1,8 +1,8 @@
 " Toggle hunk highlights
-nnoremap <silent> ,hh <Plug>GitGutterLineHighlightsToggle
+nnoremap <silent> <Leader>hh <Plug>GitGutterLineHighlightsToggle
 
 " 'Refresh' GitGutter
-nnoremap <silent> ,gg <Plug>GitGutter
+nnoremap <silent> <Leader>gg <Plug>GitGutter
 
 " Jump between hunks
 nmap ]h <Plug>GitGutterNextHunk

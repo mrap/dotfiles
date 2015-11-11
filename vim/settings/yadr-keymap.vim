@@ -6,11 +6,11 @@
 " alias yw to yank the entire word 'yank inner word'
 " even if the cursor is halfway inside the word
 " FIXME: will not properly repeat when you use a dot (tie into repeat.vim)
-nnoremap ,yw yiww
+nnoremap <Leader>yw yiww
 
-" ,ow = 'overwrite word', replace a word with what's in the yank buffer
+" <Leader>ow = 'overwrite word', replace a word with what's in the yank buffer
 " FIXME: will not properly repeat when you use a dot (tie into repeat.vim)
-nnoremap ,ow "_diwhp
+nnoremap <Leader>pw "_diwhp
 
 "make Y consistent with C and D
 nnoremap Y y$
@@ -25,44 +25,44 @@ endfunction
 nnoremap 0 ^
 nnoremap ^ 0
 
-" ,# Surround a word with #{ruby interpolation}
-map ,# ysiw#
-vmap ,# c#{<C-R>"}<ESC>
+" <Leader># Surround a word with #{ruby interpolation}
+map <Leader># ysiw#
+vmap <Leader># c#{<C-R>"}<ESC>
 
-" ," Surround a word with "quotes"
-map ," ysiw"
-vmap ," c"<C-R>""<ESC>
+" <Leader>" Surround a word with "quotes"
+map <Leader>" ysiw"
+vmap <Leader>" c"<C-R>""<ESC>
 
-" ,' Surround a word with 'single quotes'
-map ,' ysiw'
-vmap ,' c'<C-R>"'<ESC>
+" <Leader>' Surround a word with 'single quotes'
+map <Leader>' ysiw'
+vmap <Leader>' c'<C-R>"'<ESC>
 
-" ,) or ,( Surround a word with (parens)
+" <Leader>) or <Leader>( Surround a word with (parens)
 " The difference is in whether a space is put in
-map ,( ysiw(
-map ,) ysiw)
-vmap ,( c( <C-R>" )<ESC>
-vmap ,) c(<C-R>")<ESC>
+map <Leader>( ysiw(
+map <Leader>) ysiw)
+vmap <Leader>( c( <C-R>" )<ESC>
+vmap <Leader>) c(<C-R>")<ESC>
 
-" ,[ Surround a word with [brackets]
-map ,] ysiw]
-map ,[ ysiw[
-vmap ,[ c[ <C-R>" ]<ESC>
-vmap ,] c[<C-R>"]<ESC>
+" <Leader>[ Surround a word with [brackets]
+map <Leader>] ysiw]
+map <Leader>[ ysiw[
+vmap <Leader>[ c[ <C-R>" ]<ESC>
+vmap <Leader>] c[<C-R>"]<ESC>
 
-" ,{ Surround a word with {braces}
-map ,} ysiw}
-map ,{ ysiw{
-vmap ,} c{ <C-R>" }<ESC>
-vmap ,{ c{<C-R>"}<ESC>
+" <Leader>{ Surround a word with {braces}
+map <Leader>} ysiw}
+map <Leader>{ ysiw{
+vmap <Leader>} c{ <C-R>" }<ESC>
+vmap <Leader>{ c{<C-R>"}<ESC>
 
-map ,` ysiw`
+map <Leader>` ysiw`
 
 " gary bernhardt's hashrocket
 imap <c-l> <space>=><space>
 
-"Go to last edit location with ,.
-nnoremap ,. '.
+"Go to last edit location with <Leader>.
+nnoremap <Leader>. '.
 
 "When typing a string, your quotes auto complete. Move past the quote
 "while still in insert mode by hitting Ctrl-a. Example:
@@ -73,19 +73,10 @@ nnoremap ,. '.
 " put the cursor right after the quote
 imap <C-a> <esc>wa
 
-" ==== NERD tree
-" Open the project tree and expose current file in the nerdtree with Ctrl-\
-nnoremap <silent> <C-\> :NERDTreeFind<CR>:vertical res 30<CR>
-
-" ,q to toggle quickfix window (where you have stuff like Ag)
-" ,oq to open it back up (rare)
-nmap <silent> ,qc :cclose<CR>
-nmap <silent> ,qo :copen<CR>
-
 "Move back and forth through previous and next buffers
-"with ,z and ,x
-nnoremap <silent> ,z :bp<CR>
-nnoremap <silent> ,x :bn<CR>
+"with <Leader>z and <Leader>x
+nnoremap <silent> <Leader>z :bp<CR>
+nnoremap <silent> <Leader>x :bn<CR>
 
 " ==============================
 " Window/Tab/Split Manipulation
@@ -103,13 +94,11 @@ nnoremap <C-w>f :sp +e<cfile><CR>
 nnoremap <C-w>gf :tabe<cfile><CR>
 
 " Zoom in
-map <silent> ,gz <C-w>o
+map <silent> <Leader>gz <C-w>o
 
-" Create window splits easier. The default
-" way is Ctrl-w,v and Ctrl-w,s. I remap
-" this to vv and ss
-nnoremap <silent> vv <C-w>v
-nnoremap <silent> ss <C-w>s
+" Create window splits easier.
+nnoremap <silent> <Leader>sv <C-w>v
+nnoremap <silent> <Leader>ss <C-w>s
 
 " create <%= foo %> erb tags using Ctrl-k in edit mode
 imap <silent> <C-K> <%=   %><Esc>3hi
@@ -123,20 +112,20 @@ imap <silent> <C-J> <%  %><Esc>2hi
 
 " copy current filename into system clipboard - mnemonic: (c)urrent(f)ilename
 " this is helpful to paste someone the path you're looking at
-nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
-nnoremap <silent> ,cn :let @* = expand("%:t")<CR>
+nnoremap <silent> <Leader>cf :let @* = expand("%:~")<CR>
+nnoremap <silent> <Leader>cn :let @* = expand("%:t")<CR>
 
 "Clear current search highlight by double tapping //
 nmap <silent> // :nohlsearch<CR>
 
 "(v)im (c)ommand - execute current line as a vim command
-nmap <silent> ,vc yy:<C-f>p<C-c><CR>
+nmap <silent> <Leader>vc yy:<C-f>p<C-c><CR>
 
 "(v)im (r)eload
-nmap <silent> ,vr :so %<CR>
+nmap <silent> <Leader>vr :so %<CR>
 
-" Type ,hl to toggle highlighting on/off, and show current value.
-noremap ,hl :set hlsearch! hlsearch?<CR>
+" Type <Leader>hl to toggle highlighting on/off, and show current value.
+noremap <Leader>hl :set hlsearch! hlsearch?<CR>
 
 " These are very similar keys. Typing 'a will jump to the line in the current
 " file marked with ma. However, `a will jump to the line and column marked
@@ -153,7 +142,7 @@ nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
 
 " Get the current highlight group. Useful for then remapping the color
-map ,hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
+map <Leader>hi :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 
 " ,hp = html preview
-map <silent> ,hp :!open -a Safari %<CR><CR>
+map <silent> <Leader>hp :!open -a Safari %<CR><CR>

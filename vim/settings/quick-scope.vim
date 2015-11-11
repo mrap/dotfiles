@@ -1,6 +1,3 @@
-nmap <leader>q <plug>(QuickScopeToggle)
-vmap <leader>q <plug>(QuickScopeToggle)
-
 " Insert into your .vimrc after quick-scope is loaded.
 " Obviously depends on <https://github.com/unblevable/quick-scope> being installed.
 
