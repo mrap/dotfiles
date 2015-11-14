@@ -8,3 +8,6 @@
 [submodule "zsh/fshow"]
 	path = zsh/fshow
 	url = git@gist.github.com:f4fca918e937e6bf5bad.git
+[submodule "chrome/chromium-vim"]
+	path = chrome/chromium-vim
+	url = https://github.com/1995eaton/chromium-vim.git
