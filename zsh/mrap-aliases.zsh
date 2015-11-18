@@ -16,3 +16,12 @@ pbcopyfile () {
 }
 
 alias bcask='brew cask'
+
+findreplace () {
+  if [ $# -lt 2 ]; then
+    echo "requires two args"
+    return 1;
+  fi
+  dir=${3:-'.'}
+  sed -i '' -e "s/$1/$2/g" $(find $dir -type f)
+}
