@@ -136,3 +136,7 @@ set scrolloff=999
 
 " K splits line (opposite of J)
 nnoremap K i<cr><esc>k$
+
+" Persistent undos
+set undodir=~/.vim/backups
+set undofile
