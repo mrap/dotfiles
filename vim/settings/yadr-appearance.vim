@@ -1,7 +1,7 @@
 " Make it beautiful - colors and fonts
 
 set background=light
-set cursorline
+
 
 if has("gui_running")
   colorscheme solarized
