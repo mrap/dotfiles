@@ -1,5 +1,5 @@
-Bundle "rking/ag.vim"
-Bundle "vim-scripts/IndexedSearch"
-Bundle "nelstrom/vim-visual-star-search"
-Bundle "skwp/greplace.vim"
-Bundle "easymotion/vim-easymotion"
+Plugin 'rking/ag.vim'
+Plugin 'vim-scripts/IndexedSearch'
+Plugin 'nelstrom/vim-visual-star-search'
+Plugin 'skwp/greplace.vim'
+Plugin 'easymotion/vim-easymotion'
