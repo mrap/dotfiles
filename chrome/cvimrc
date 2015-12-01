@@ -11,6 +11,7 @@ set scalehints
 set smoothscroll
 set hud
 
+let defaultengine = "duckduckgo"
 let searchlimit = 20
 let searchengine stackoverflow = "http://stackoverflow.com/search?q="
 let searchalias s = "stackoverflow"
