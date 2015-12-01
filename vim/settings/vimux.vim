@@ -1,19 +1,19 @@
 let g:VimuxUseNearest = 1
 
 " Prompt for a command to run
-map <Leader>vp :VimuxPromptCommand<CR>
+map <Leader>;p :VimuxPromptCommand<CR>
 
 " Run last command executed by VimuxRunCommand
-map <Leader>vl :VimuxRunLastCommand<CR>
+map <Leader>;l :VimuxRunLastCommand<CR>
 
 " Inspect runner pane
-map <Leader>vi :VimuxInspectRunner<CR>
+map <Leader>;i :VimuxInspectRunner<CR>
 
 " Close vim tmux runner opened by VimuxRunCommand
-map <Leader>vq :VimuxCloseRunner<CR>
+map <Leader>;q :VimuxCloseRunner<CR>
 
 " Interrupt any command running in the runner pane
-map <Leader>vx :VimuxInterruptRunner<CR>
+map <Leader>;x :VimuxInterruptRunner<CR>
 
 " Zoom the runner pane (use <bind-key> z to restore runner pane)
-map <Leader>vz :call VimuxZoomRunner()<CR>
+map <Leader>;z :call VimuxZoomRunner()<CR>

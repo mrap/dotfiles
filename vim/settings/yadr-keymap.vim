@@ -94,9 +94,8 @@ nnoremap <C-w>gf :tabe<cfile><CR>
 map <silent> <Leader>gz <C-w>o
 
 " Create window splits easier.
-nnoremap <silent> <Leader>sv <C-w>v
-nnoremap <silent> <Leader>ss <C-w>s
-
+nnoremap <silent> <Leader>v <C-w>v
+nnoremap <silent> <Leader>s <C-w>s
 
 " ============================
 " Shortcuts for everyday tasks
@@ -110,11 +109,11 @@ nnoremap <silent> <Leader>cn :let @* = expand("%:t")<CR>
 "Clear current search highlight by double tapping //
 nmap <silent> // :nohlsearch<CR>
 
-"(v)im (c)ommand - execute current line as a vim command
-nmap <silent> <Leader>vc yy:<C-f>p<C-c><CR>
+"(V)im (c)ommand - execute current line as a vim command
+nmap <silent> <Leader>Vc yy:<C-f>p<C-c><CR>
 
-"(v)im (r)eload
-nmap <silent> <Leader>vr :so %<CR>
+"(V)im (r)eload
+nmap <silent> <Leader>Vr :so %<CR>
 
 " Type <Leader>hl to toggle highlighting on/off, and show current value.
 noremap <Leader>hl :set hlsearch! hlsearch?<CR>
