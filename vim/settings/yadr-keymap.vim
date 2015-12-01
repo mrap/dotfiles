@@ -11,7 +11,7 @@ nnoremap <Leader>yw yiww
 
 " <Leader>ow = 'overwrite word', replace a word with what's in the yank buffer
 " FIXME: will not properly repeat when you use a dot (tie into repeat.vim)
-nnoremap <Leader>pw "_diwhp
+nnoremap <Leader>ow "_diwhp
 
 "make Y consistent with C and D
 nnoremap Y y$

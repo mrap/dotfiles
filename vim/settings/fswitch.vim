@@ -1,1 +1,1 @@
-nmap <silent> <Leader>of :FSHere<cr>
+nmap <silent> <Leader>O :FSHere<cr>
