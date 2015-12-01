@@ -7,7 +7,7 @@ set nodefaultnewtabpage
 set noautofocus
 set cncpcompletion
 set linkanimations
-set showtabindices
+set scalehints
 set smoothscroll
 set hud
 
