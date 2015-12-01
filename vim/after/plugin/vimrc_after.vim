@@ -26,4 +26,4 @@ unmap <Leader>qa/
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :qa<CR>
 
-noremap <Leader><CR> :
+noremap , :
