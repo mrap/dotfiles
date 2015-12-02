@@ -23,7 +23,7 @@ let hintcharacters = 'arstneiowfpluy'
 " Mappings
 
 let mapleader = ","
-map <Space> :
+map <Leader><Space> :
 map <C-d> scrollPageDown
 map <C-u> scrollPageUp
 map ,b :buffer<Space>
