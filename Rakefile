@@ -14,16 +14,17 @@ task :install => [:submodule_init, :submodules] do
   install_rvm_binstubs
 
   # this has all the runcoms from this directory.
-  file_operation(Dir.glob('git/*')) if want_to_install?('git configs (color, aliases)')
-  file_operation(Dir.glob('irb/*')) if want_to_install?('irb/pry configs (more colorful)')
-  file_operation(Dir.glob('ruby/*')) if want_to_install?('rubygems config (faster/no docs)')
-  file_operation(Dir.glob('ctags/*')) if want_to_install?('ctags config (better js/ruby support)')
-  file_operation(Dir.glob('tmux/*')) if want_to_install?('tmux config')
-  file_operation(Dir.glob('vimify/*')) if want_to_install?('vimification of command line tools')
+  install_files(Dir.glob('git/*')) if want_to_install?('git configs (color, aliases)')
+  install_files(Dir.glob('irb/*')) if want_to_install?('irb/pry configs (more colorful)')
+  install_files(Dir.glob('ruby/*')) if want_to_install?('rubygems config (faster/no docs)')
+  install_files(Dir.glob('ctags/*')) if want_to_install?('ctags config (better js/ruby support)')
+  install_files(Dir.glob('tmux/*')) if want_to_install?('tmux config')
+  install_files(Dir.glob('vimify/*')) if want_to_install?('vimification of command line tools')
   if want_to_install?('vim configuration (highly recommended)')
     install_files(Dir.glob('{vim,vimrc}'))
     Rake::Task["install_vundle"].execute
   end
+  install_files(Dir.glob('xvimrc'), :symlink)
 
   Rake::Task["install_prezto"].execute
 
