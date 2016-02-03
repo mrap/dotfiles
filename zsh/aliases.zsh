@@ -126,7 +126,7 @@ alias gb='git b'
 alias gbr='git recent-branches'
 alias gbrrem='git recent-branches-remote'
 alias gbrall='git recent-branches-all'
-alias gbd='git b -D -w'
+alias gbd='git b -d'
 # Staged and cached are the same thing
 alias gdc='git diff --cached -w'
 alias gds='git diff --staged -w'
