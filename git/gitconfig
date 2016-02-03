@@ -21,8 +21,10 @@
   snapshot = !git stash save "snapshot: $(date)" && git stash apply "stash@{0}"
   snapshots = !git stash list --grep snapshot
 
-  #via http://stackoverflow.com/questions/5188320/how-can-i-get-a-list-of-git-branches-ordered-by-most-recent-commit
-  recent-branches = !git for-each-ref --count=15 --sort=-committerdate refs/heads/ --format='%(refname:short)'
+  #via http://stackoverflow.com/a/30076212/2078664
+  recent-branches = "!r() { cur=$(git rev-parse --abbrev-ref HEAD); git for-each-ref --sort=-committerdate refs/heads/ --format='%(color:green)%(refname:short)|%(color:blue)%(committerdate:relative)|%(color:yellow)%(objectname:short)|%(color:blue)%(subject)|%(color:magenta)[%(authorname)]%(color:reset)' | sed \"s/m${cur}|/m* ${cur}|/\" | column -ts'|'; }; r"
+  recent-branches-remote = "!r() { cur=$(git rev-parse --abbrev-ref HEAD); git for-each-ref --sort=-committerdate refs/remotes/ --format='%(color:green)%(refname:short)|%(color:blue)%(committerdate:relative)|%(color:yellow)%(objectname:short)|%(color:blue)%(subject)|%(color:magenta)[%(authorname)]%(color:reset)' | sed \"s/m${cur}|/m* ${cur}|/\" | column -ts'|'; }; r"
+  recent-branches-all = "!r() { cur=$(git rev-parse --abbrev-ref HEAD); git for-each-ref --sort=-committerdate refs/heads/ refs/remotes/ --format='%(color:green)%(refname:short)|%(color:blue)%(committerdate:relative)|%(color:yellow)%(objectname:short)|%(color:blue)%(subject)|%(color:magenta)[%(authorname)]%(color:reset)' | sed \"s/m${cur}|/m* ${cur}|/\" | column -ts'|'; }; r"
 
   # branch
   b = branch -v                     # branch (verbose)
