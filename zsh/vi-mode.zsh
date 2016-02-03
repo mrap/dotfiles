@@ -12,10 +12,4 @@ bindkey '^r' history-incremental-search-backward
 bindkey '^p' history-substring-search-up
 bindkey '^n' history-substring-search-down
 
-function zle-line-init zle-keymap-select {
-  zle reset-prompt
-}
-
-zle -N zle-line-init
-zle -N zle-keymap-select
 export KEYTIMEOUT=1
