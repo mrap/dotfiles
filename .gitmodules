@@ -11,6 +11,9 @@
 [submodule "chrome/chromium-vim"]
 	path = chrome/chromium-vim
 	url = https://github.com/1995eaton/chromium-vim.git
+[submodule "zsh/prezto-themes/zsh-prompt-garrett"]
+	path = zsh/prezto-themes/zsh-prompt-garrett
+	url = https://github.com/chauncey-garrett/zsh-prompt-garrett.git
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
