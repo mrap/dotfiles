@@ -1,4 +1,4 @@
-let configpath = '/Users/mrap/.yadr/chrome/cvimrc'
+let configpath = '~/.yadr/chrome/cvimrc'
 set localconfig
 
 " Settings
