@@ -9,7 +9,8 @@ vim/spell
 vim/after/.vimrc.after
 vim/.vundles.local
 vim/.vundles.local.bak
-vim/bundle
+vim/bundle/*
+!vim/bundle/Vundle.vim
 vim/sessions
 .netrwhist
 bin/subl
