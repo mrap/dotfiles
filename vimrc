@@ -27,11 +27,20 @@ set hidden
 "turn on syntax highlighting
 syntax on
 
-" Change leader to a comma because the backslash is too far away
-" That means all \x commands turn into ,x
+" Change leader to <Space> because the backslash is too far away
+" That means all \x commands turn into <Space>x
 " The mapleader has to be set before vundle starts loading all 
 " the plugins.
 let mapleader = "\<Space>"
+
+" , as : for an easier vim command line
+noremap , :
+
+" Easier w and q
+nnoremap <Leader>w :w<CR>
+nnoremap <Leader>W :wq<CR>
+nnoremap <Leader>q :q<CR>
+nnoremap <Leader>Q :qa<CR>
 
 " =============== Vundle Initialization ===============
 " This loads all the plugins specified in ~/.vim/vundles.vim
@@ -129,7 +138,7 @@ cnoremap <C-n> <Down>
 set ttimeoutlen=0
 
 " Sane pasting from clipboard
-nmap <Leader>pp "+p
+nmap <Leader>p "+p
 
 " Keep working line in the center
 set scrolloff=999
