@@ -1,5 +1,5 @@
 " Turn off any enhancements
-let g:yadr_disable_solarized_enhancements = 0
+let g:yadr_disable_solarized_enhancements = 1
 
 if !exists("g:yadr_disable_solarized_enhancements")
   hi! link txtBold Identifier

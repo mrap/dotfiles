@@ -1,11 +1,6 @@
 " Make it beautiful - colors and fonts
 
-set background=light
-
-
 if has("gui_running")
-  colorscheme solarized
-
   " Show tab number (useful for Cmd-1, Cmd-2.. mapping)
   " For some reason this doesn't work as a regular set command,
   " (the numbers don't show up) so I made it a VimEnter event
@@ -21,5 +16,8 @@ if has("gui_running")
   end
 else
   set t_Co=256
-  colorscheme solarized
 endif
+
+set background=light
+colorscheme solarized
+
