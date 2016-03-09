@@ -29,8 +29,7 @@ syntax on
 
 " Change leader to <Space> because the backslash is too far away
 " That means all \x commands turn into <Space>x
-" The mapleader has to be set before vundle starts loading all 
-" the plugins.
+" The mapleader has to be set before we load any plugins
 let mapleader = "\<Space>"
 
 " , as : for an easier vim command line
@@ -42,11 +41,9 @@ nnoremap <Leader>W :wq<CR>
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :qa<CR>
 
-" =============== Vundle Initialization ===============
-" This loads all the plugins specified in ~/.vim/vundles.vim
-" Use Vundle plugin to manage all other plugins
-if filereadable(expand("~/.vim/vundles.vim"))
-  source ~/.vim/vundles.vim
+" =============== Plugin Initialization ===============
+if filereadable(expand("~/.vim/plugs.vim"))
+  source ~/.vim/plugs.vim
 endif
 
 " ================ Turn Off Swap Files ==============
