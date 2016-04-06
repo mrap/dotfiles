@@ -28,3 +28,5 @@ Plug 'maksimr/vim-jsbeautify'
 Plug 'einars/js-beautify'
 Plug 'Valloric/MatchTagAlways'
 Plug 'garyburd/go-explorer'
+Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
+Plug 'zchee/deoplete-go', { 'do': 'make'}

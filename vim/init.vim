@@ -1,11 +1,24 @@
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
+let $VARPATH=expand('$HOME/.cache/vim')
+
+augroup MyAutoCmd
+	autocmd!
+augroup END
+
+" Write history on idle
+augroup MyAutoCmd
+	autocmd CursorHold * if exists(':rshada') | rshada | wshada | endif
+augroup END
+
+if has("nvim")
+  " Use Vim settings, rather then Vi settings (much better!).
+  " This must be first, because it changes other options as a side effect.
+  set nocompatible
+endif
 
 " TODO: this may not be in the correct place. It is intended to allow overriding <Leader>.
-" source ~/.vimrc.before if it exists.
-if filereadable(expand("~/.vimrc.before"))
-  source ~/.vimrc.before
+" source ~/.nvimrc.before if it exists.
+if filereadable(expand("~/.nvimrc.before"))
+  source ~/.nvimrc.before
 endif
 
 " ================ General Config ====================
@@ -51,6 +64,12 @@ endif
 set noswapfile
 set nobackup
 set nowb
+
+if has('nvim')
+	set shada='30,/100,:50,<10,@10,s50,h,n$VARPATH/shada
+else
+	set viminfo='30,/100,:500,<10,@10,s10,h,n$VARPATH/viminfo
+endif
 
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
@@ -146,3 +165,9 @@ nnoremap K i<cr><esc>k$
 " Persistent undos
 set undodir=~/.vim/backups
 set undofile
+
+if has("nvim")
+  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  let g:python_host_prog = '/usr/local/bin/python'
+  let g:python3_host_prog = '/usr/local/bin/python3'
+endif 

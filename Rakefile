@@ -21,8 +21,9 @@ task :install => [:submodule_init, :submodules] do
   install_files(Dir.glob('tmux/**/*')) if want_to_install?('tmux config')
   install_files(Dir.glob('vimify/*')) if want_to_install?('vimification of command line tools')
   if want_to_install?('vim configuration (highly recommended)')
-    install_files(Dir.glob('{vim,vimrc}'))
-    Rake::Task["install_vundle"].execute
+    install_files(Dir.glob('{vim}'))
+    run %{ ln -nfs "$HOME/.yadr/vim/init.vim" "$HOME/.vimrc"}
+    run %{ ln -nfs "$HOME/.yadr/vim" "$HOME/.config/nvim"}
   end
   install_files(Dir.glob('xvimrc'), :symlink)
 
@@ -92,26 +93,6 @@ task :vundle_migration do
   FileUtils.mv(File.join('vim','bundle'), File.join('vim', 'bundle.old'))
 end
 
-desc "Runs Vundle installer in a clean vim environment"
-task :install_vundle do
-  puts "======================================================"
-  puts "Installing and updating vundles."
-  puts "The installer will now proceed to run PluginInstall to install vundles."
-  puts "======================================================"
-
-  puts ""
-
-  vundle_path = File.join('vim','bundle', 'vundle')
-  unless File.exists?(vundle_path)
-    run %{
-      cd $HOME/.yadr
-      git clone https://github.com/gmarik/vundle.git #{vundle_path}
-    }
-  end
-
-  Vundle::update_vundle
-end
-
 task :default => 'install'
 
 
@@ -175,6 +156,7 @@ def install_homebrew
   puts "======================================================"
   run %{brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher noti}
   run %{brew install macvim --custom-icons --override-system-vim --with-lua --with-luajit}
+  run %{brew tap neovim/homebrew-neovim && brew install neovim --with-release}
   puts
   puts
 end
