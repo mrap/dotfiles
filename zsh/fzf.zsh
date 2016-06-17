@@ -25,8 +25,8 @@ export FZF_DEFAULT_COMMAND='ag -l -g ""'
 # https://github.com/junegunn/fzf/wiki/Color-schemes
 export FZF_DEFAULT_OPTS='
 --bind J:down,K:up
-  --color fg:252,bg:233,hl:67,fg+:252,bg+:235,hl+:81
-  --color info:144,prompt:161,spinner:135,pointer:135,marker:118
+--color fg:188,bg:233,hl:103,fg+:222,bg+:234,hl+:104
+--color info:183,prompt:110,spinner:107,pointer:167,marker:215
 '
 
 # fcs - get git commit sha
@@ -45,9 +45,26 @@ fzf-fcs-widget() {
   zle redisplay
 }
 
+# fbr - git branch (including remote branches)
+fbr() {
+  local branches branch
+  branches=$(git branch --all | grep -v HEAD) &&
+  branch=$(echo "$branches" |
+           fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+  echo -n $(echo "$branch" | sed "s/.* //")
+}
+
+fzf-fbr-widget() {
+  LBUFFER="${LBUFFER}$(fbr)"
+  zle redisplay
+}
+
 zle     -N   fzf-fcs-widget
 bindkey '^G' fzf-fcs-widget
 
 source "$yadr/zsh/fshow/gistfile1.sh"
 zle     -N   fshow
 bindkey '^S' fshow
+
+zle     -N   fzf-fbr-widget
+bindkey '^B' fzf-fbr-widget
