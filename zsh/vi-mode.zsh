@@ -1,7 +1,8 @@
 # Vi Mode key bindings
 # http://dougblack.io/words/zsh-vi-mode.html
 
-export EDITOR='vim'
+export EDITOR='nvim'
+export VISUAL='nvim'
 
 bindkey -v
 
