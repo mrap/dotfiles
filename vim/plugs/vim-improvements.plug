@@ -31,6 +31,7 @@ Plug 'majutsushi/tagbar'
 Plug 'benmills/vimux'
 Plug 'unblevable/quick-scope'
 Plug 'terryma/vim-expand-region'
+Plug 'mhinz/vim-startify'
 
 set rtp+=/usr/local/opt/fzf
 Plug 'junegunn/fzf.vim'
