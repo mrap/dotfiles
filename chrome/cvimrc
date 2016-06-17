@@ -3,31 +3,42 @@ set localconfig
 
 " Settings
 
-set nodefaultnewtabpage
+let barposition = "top"
+
 set noautofocus
 set cncpcompletion
-set linkanimations
+set nolinkanimations
 set scalehints
-set smoothscroll
 set hud
 
+set smoothscroll
+let scrollstep = 30
+let scrollduration = 833
+
+let zoomfactor = 0.3
+
 let defaultengine = "duckduckgo"
-let searchlimit = 20
+let searchlimit = 25
 let searchengine stackoverflow = "http://stackoverflow.com/search?q="
 let searchalias s = "stackoverflow"
 let searchalias g = "google"
 
 " Colemak friendly
-let hintcharacters ='arsdheiqwfpgjluy;zxcvbkmtno'
+let hintcharacters ='tnesirhdoajg'
 
 " Mappings
 
 let mapleader = ","
-map <Leader><Space> :
+map <Leader><Leader> openCommandBar
 map <C-d> scrollPageDown
 map <C-u> scrollPageUp
-map ,b :buffer<Space>
 map ,h :help<CR>
+map [ previousTab
+map ] nextTab
+
+" b: list buffers
+unmap b
+map b :buffer<Space>
 
 unmap T
 map T :tabnew google<Space>
