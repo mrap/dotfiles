@@ -10,8 +10,8 @@ let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_html_tidy_ignore_errors=[" proprietary attribute \"ng-"]"]
 "html warnings are passive
 let g:syntastic_mode_map = {'mode'              : 'active',
-                          \ 'active_filetypes'  : [],
-                          \ 'passive_filetypes' : [] }
+                          \ 'active_filetypes'  : ['go'],
+                          \ 'passive_filetypes' : ['java'] }
 
 let g:syntastic_javascript_checkers = ['jsxhint']
 
@@ -29,3 +29,5 @@ endfunction
 if !exists("g:syntastic_ruby_exec")
     let g:syntastic_ruby_exec = s:FindRubyExec()
 endif
+
+let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
