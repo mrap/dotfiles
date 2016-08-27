@@ -1,2 +1,1 @@
-set background=light
-colorscheme solarized
+colorscheme flattened_light
