@@ -48,12 +48,16 @@ map O :open google<Space>
 let vimcommand="mvim -f"
 imap <C-o> editWithVim
 
+getSimpleUrl() -> {{
+  return window.location.origin + window.location.pathname;
+}}
+
 " Yank current url without any params or anchors
-yankCurrentUrl() -> {{
-  var url = window.location.origin + window.location.pathname;
+yankSimpleUrl() -> {{
+  var url = getSimpleUrl();
   Clipboard.copy(url);
   Status.setMessage(url);
 }}
 
 unmap yY
-map yY :call yankCurrentUrl<CR>
+map yY :call yankSimpleUrl<CR>
