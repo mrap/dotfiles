@@ -156,9 +156,6 @@ set ttimeoutlen=0
 " Sane pasting from clipboard
 nmap <Leader>p "+p
 
-" Keep working line in the center
-set scrolloff=999
-
 " K splits line (opposite of J)
 nnoremap K i<cr><esc>k$
 
