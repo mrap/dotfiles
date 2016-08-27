@@ -145,3 +145,5 @@
 [user]
 	name = Mike Rapadas
 	email = mike@mrap.me
+[rebase]
+  autostash = true
