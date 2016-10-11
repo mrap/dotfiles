@@ -1,5 +1,5 @@
 Plug 'AndrewRadev/splitjoin.vim'
-Plug 'Raimondi/delimitMate'
+Plug 'jiangmiao/auto-pairs'
 Plug 'Shougo/deoplete.nvim'
 Plug 'briandoll/change-inside-surroundings.vim'
 Plug 'godlygeek/tabular'
