@@ -2,9 +2,6 @@
 	path = zsh/prezto
 	url = https://github.com/sorin-ionescu/prezto.git
   ignore = dirty
-[submodule "keyboard"]
-	path = keyboard
-	url = git@github.com:mrap/keyboard.git
 [submodule "zsh/fshow"]
 	path = zsh/fshow
 	url = git@gist.github.com:f4fca918e937e6bf5bad.git
@@ -17,3 +14,6 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
+[submodule "hyper-hacks"]
+	path = hyper-hacks
+	url = https://github.com/mrap/hyper-hacks
