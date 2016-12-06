@@ -162,3 +162,8 @@ nnoremap L :tabn<CR>
 " Keep the line number gutter narrow so three digits is cozy.
 set numberwidth=2
 
+" What arrow keys?
+noremap <Up> <nop>
+noremap <Down> <nop>
+noremap <Left> <nop>
+noremap <Right> <nop>
