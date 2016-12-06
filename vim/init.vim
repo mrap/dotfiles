@@ -1,14 +1,5 @@
 let $VARPATH=expand('$HOME/.cache/vim')
 
-augroup MyAutoCmd
-	autocmd!
-augroup END
-
-" Write history on idle
-augroup MyAutoCmd
-	autocmd CursorHold * if exists(':rshada') | rshada | wshada | endif
-augroup END
-
 if has("nvim")
   " Use Vim settings, rather then Vi settings (much better!).
   " This must be first, because it changes other options as a side effect.
@@ -59,12 +50,6 @@ endif
 set noswapfile
 set nobackup
 set nowb
-
-if has('nvim')
-	set shada='30,/100,:50,<10,@10,s50,h,n$VARPATH/shada
-else
-	set viminfo='30,/100,:500,<10,@10,s10,h,n$VARPATH/viminfo
-endif
 
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
