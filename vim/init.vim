@@ -45,9 +45,7 @@ let mapleader = "\<Space>"
 " , as : for an easier vim command line
 noremap , :
 
-" Easier w and q
-nnoremap <Leader>w :w<CR>
-nnoremap <Leader>W :wq<CR>
+" Easier q
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :qa<CR>
 
@@ -103,7 +101,7 @@ set linebreak    "Wrap lines at convenient points
 " ================ Folds ============================
 
 set foldmethod=indent   "fold based on indent
-set foldnestmax=3       "deepest fold is 3 levels
+set foldnestmax=2       "deepest fold is 2 levels
 set nofoldenable        "dont fold by default
 
 " ================ Completion =======================
@@ -172,5 +170,10 @@ if has("nvim")
   let g:python3_host_prog = '/usr/local/bin/python3'
 endif
 
-" Smoother scrolling and rendering performance
-set lazyredraw
+" Faster tab navigation
+nnoremap H :tabp<CR>
+nnoremap L :tabn<CR>
+
+" Keep the line number gutter narrow so three digits is cozy.
+set numberwidth=2
+
