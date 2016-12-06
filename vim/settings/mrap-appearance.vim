@@ -1,1 +1,0 @@
-colorscheme flattened_light
