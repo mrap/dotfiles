@@ -1,6 +1,6 @@
 custom/zsh
 
-vim/backups
+vim/undos
 vim/view
 *un~
 vim/.netrwhist

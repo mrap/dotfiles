@@ -55,9 +55,11 @@ set nowb
 " ================ Persistent Undo ==================
 " Keep undo history across sessions, by storing in file.
 " Only works all the time.
-if has('persistent_undo') && !isdirectory(expand('~').'/.vim/backups')
-  silent !mkdir ~/.vim/backups > /dev/null 2>&1
-  set undodir=~/.vim/backups
+if has('persistent_undo')
+  if !isdirectory($HOME."/.vim/undos")
+    call mkdir($HOME."/.vim/undos", "", 0700)
+  endif
+  set undodir=~/.vim/undos
   set undofile
 endif
 
@@ -95,7 +97,7 @@ set nofoldenable        "dont fold by default
 set wildmode=list:longest
 set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
 set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
-set wildignore+=*vim/backups*
+set wildignore+=*vim/undos*
 set wildignore+=*sass-cache*
 set wildignore+=*DS_Store*
 set wildignore+=vendor/rails/**
@@ -139,10 +141,6 @@ nmap <Leader>p "+p
 
 " K splits line (opposite of J)
 nnoremap K i<cr><esc>k$
-
-" Persistent undos
-set undodir=~/.vim/backups
-set undofile
 
 if has("nvim")
   let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
