@@ -1,0 +1,8 @@
+call dein#add('ck3g/vim-change-hash-syntax')
+call dein#add('ecomba/vim-ruby-refactoring')
+call dein#add('keith/rspec.vim')
+call dein#add('tpope/vim-bundler')
+call dein#add('tpope/vim-rails')
+call dein#add('tpope/vim-rake')
+call dein#add('tpope/vim-rvm')
+call dein#add('vim-ruby/vim-ruby')

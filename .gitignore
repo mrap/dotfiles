@@ -8,7 +8,8 @@ vim/tmp
 vim/spell
 vim/after/.vimrc.after
 vim/autoload/*
-vim/plugged/*
+vim/dein/*
+!vim/dein/Shougo/dein.vim
 !vim/bundle/Vundle.vim
 vim/sessions
 .netrwhist

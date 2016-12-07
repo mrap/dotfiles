@@ -1,3 +1,9 @@
+" =============== Plugin Initialization ===============
+
+if filereadable(expand("~/.vim/dein.vim"))
+  source ~/.vim/dein.vim
+endif
+
 let $VARPATH=expand('$HOME/.cache/vim')
 
 if has("nvim")
@@ -39,11 +45,6 @@ noremap , :
 " Easier q
 nnoremap <Leader>q :q<CR>
 nnoremap <Leader>Q :qa<CR>
-
-" =============== Plugin Initialization ===============
-if filereadable(expand("~/.vim/plugs.vim"))
-  source ~/.vim/plugs.vim
-endif
 
 " ================ Turn Off Swap Files ==============
 
