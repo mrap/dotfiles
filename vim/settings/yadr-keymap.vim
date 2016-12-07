@@ -71,10 +71,6 @@ nnoremap <Leader>. '.
 " put the cursor right after the quote
 imap <C-a> <esc>wa
 
-" Create window splits easier.
-nnoremap <silent> <Leader>v <C-w>v
-nnoremap <silent> <Leader>s <C-w>s
-
 " ============================
 " Shortcuts for everyday tasks
 " ============================
@@ -96,8 +92,8 @@ nmap <silent> <Leader>Vr :so %<CR>
 " ============================
 " SplitJoin plugin
 " ============================
-nmap sj :SplitjoinSplit<cr>
-nmap sk :SplitjoinJoin<cr>
+nmap <Leader>sj :SplitjoinSplit<cr>
+nmap <Leader>sk :SplitjoinJoin<cr>
 
 " Navigate the quickfix error list (normally :cn and :cp)
 nnoremap <silent> <Leader>z :cp<CR>
