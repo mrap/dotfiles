@@ -25,4 +25,12 @@ if exists('g:plugs["tern_for_vim"]')
 endif
 
 " tern
-autocmd FileType javascript nnoremap <silent> <buffer> gb :TernDef<CR>
+autocmd FileType javascript nnoremap <silent> <buffer> gd :TernDef<CR>
+autocmd FileType javascript nnoremap <silent> <buffer> gD :TernDoc<CR>
+let g:tern_show_argument_hints=1
+
+" deoplete-ternjs
+let g:tern_request_timeout = 1
+" Use tern_for_vim.
+let g:tern#command = ["tern"]
+let g:tern#arguments = ["--persistent"]

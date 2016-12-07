@@ -1,13 +1,18 @@
- ; .editorconfig
+;.editorconfig
 
 root = true
 
 [**.js]
+e4x = true
+indent_style = space
+indent_size = 2
+
+[**.json]
 indent_style = space
 indent_size = 2
 
 [**.jsx]
-e2x = true
+e4x = true
 indent_style = space
 indent_size = 2
 
@@ -18,3 +23,5 @@ indent_size = 2
 [**.html]
 indent_style = space
 indent_size = 2
+max_char = 78
+brace_style = expand
