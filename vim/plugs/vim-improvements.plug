@@ -30,7 +30,6 @@ Plug 'benmills/vimux'
 Plug 'unblevable/quick-scope'
 Plug 'terryma/vim-expand-region'
 Plug 'mhinz/vim-startify'
-
-set rtp+=/usr/local/opt/fzf
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'tmux-plugins/vim-tmux-focus-events'
