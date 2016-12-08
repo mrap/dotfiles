@@ -4,8 +4,6 @@ if filereadable(expand("~/.vim/dein.vim"))
   source ~/.vim/dein.vim
 endif
 
-let $VARPATH=expand('$HOME/.cache/vim')
-
 if has("nvim")
   " Use Vim settings, rather then Vi settings (much better!).
   " This must be first, because it changes other options as a side effect.
