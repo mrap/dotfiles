@@ -6,7 +6,7 @@
     (_______\_____|\____|_|
 
     # Yet Another Dotfile Repo v1.1
-    # Now with Prezto and Vundle!
+    # Now with Prezto and Dein!
 
     sh -c "`curl -fsSL https://raw.githubusercontent.com/mrap/dotfiles/master/install.sh`"
 
@@ -272,7 +272,6 @@ of plugins above to learn more.
 
 * [Debugging vim keymappings](doc/vim/keymaps.md)
 * [Overriding vim settings with ~/.vimrc.after and friends](doc/vim/override.md)
-* [Adding your own vim plugins](doc/vim/manage_plugins.md)
 
 ## Misc
 

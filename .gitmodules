@@ -14,6 +14,12 @@
 [submodule "tmux/plugins/tpm"]
 	path = tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm.git
+[submodule "zsh/gitsome"]
+	path = zsh/gitsome
+	url = https://github.com/donnemartin/gitsome.git
 [submodule "hyper-hacks"]
 	path = hyper-hacks
 	url = https://github.com/mrap/hyper-hacks
+[submodule "vim/dein/repos/github.com/Shougo/dein.vim"]
+	path = vim/dein/repos/github.com/Shougo/dein.vim
+	url = https://github.com/Shougo/dein.vim.git

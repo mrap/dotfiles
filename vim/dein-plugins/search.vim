@@ -1,0 +1,8 @@
+call dein#add('easymotion/vim-easymotion')
+call dein#add('hauleth/sad.vim')
+call dein#add('haya14busa/incsearch-easymotion.vim')
+call dein#add('haya14busa/incsearch-fuzzy.vim')
+call dein#add('haya14busa/incsearch.vim')
+call dein#add('nelstrom/vim-visual-star-search')
+call dein#add('mileszs/ack.vim')
+call dein#add('skwp/greplace.vim')

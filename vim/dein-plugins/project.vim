@@ -1,0 +1,7 @@
+call dein#add('jistr/vim-nerdtree-tabs')
+call dein#add('scrooloose/nerdtree')
+call dein#add('taiansu/nerdtree-ag')
+call dein#add('vimwiki/vimwiki')
+call dein#add('xolox/vim-misc')
+call dein#add('xolox/vim-session')
+call dein#add('Xuyuanp/nerdtree-git-plugin')

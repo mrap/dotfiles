@@ -1,6 +1,6 @@
 custom/zsh
 
-vim/backups
+vim/undos
 vim/view
 *un~
 vim/.netrwhist
@@ -8,8 +8,8 @@ vim/tmp
 vim/spell
 vim/after/.vimrc.after
 vim/autoload/*
-vim/plugged/*
-!vim/bundle/Vundle.vim
+vim/dein/*
+!vim/dein/Shougo/dein.vim
 vim/sessions
 .netrwhist
 bin/subl
