@@ -71,10 +71,6 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 
-" Auto indent pasted text
-nnoremap p p=`]<C-o>
-nnoremap P P=`]<C-o>
-
 filetype plugin on
 filetype indent on
 
@@ -133,9 +129,6 @@ cnoremap <C-n> <Down>
 
 " No ESC delay when switching back to normal mode
 set ttimeoutlen=0
-
-" Sane pasting from clipboard
-nmap <Leader>p "+p
 
 " K splits line (opposite of J)
 nnoremap K i<cr><esc>k$
