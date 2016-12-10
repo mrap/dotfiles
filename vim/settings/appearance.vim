@@ -19,3 +19,16 @@ function! HighlightCommentsOnly()
 endfunction
 
 autocmd Filetype go,java,javascript,javascript.jsx call HighlightCommentsOnly()
+
+" Keep the line number gutter narrow so three digits is cozy.
+set numberwidth=2
+
+" Enable neovim 24-bit color support and insert cursor.
+if has("nvim")
+  let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+
+  if has("termguicolors")
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+    set termguicolors
+  endif
+end
