@@ -147,6 +147,9 @@ alias gdmb='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 # Git combined commands
 alias gstplr='git stash -u && gplr && git stash pop'
 
+# Visual git log explorer
+alias glv='vim +GV'
+
 # Common shell functions
 alias less='less -r'
 alias tf='tail -f'
