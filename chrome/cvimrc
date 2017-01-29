@@ -11,7 +11,7 @@ set completeonopen
 set nolinkanimations
 set noscalehints
 set sortlinkhints
-set showtabindices
+set noshowtabindices
 set hud
 
 set smoothscroll
