@@ -1,49 +1,34 @@
-function! s:buflist()
-  redir => ls
-  silent ls
-  redir END
-  return split(ls, '\n')
-endfunction
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit' }
 
-function! s:bufopen(e)
-  execute 'buffer' matchstr(a:e, '^[ 0-9]*')
-endfunction
+nnoremap <silent> <Leader>t :Files<CR>
+nnoremap <silent> <Leader>b :Buffers<CR>
+nnoremap <silent> <Leader>T :History<CR>
+nnoremap <silent> <Leader>gs :GFiles?<CR>
+nnoremap <silent> <Leader>gl :BCommits<CR>
+nnoremap <silent> <Leader>gL :Commits<CR>
 
-" Select buffer
-command! FZFBuffers call fzf#run({
-\ 'source':  reverse(<sid>buflist()),
-\ 'sink':    function('<sid>bufopen'),
-\ 'options': '+m',
-\ 'down':    len(<sid>buflist()) + 2 })
+" Shift-tab to see line completions
+if has("nvim")
+  imap <S-Tab> <Plug>(fzf-complete-line)
+endif
 
-" Filtered recent files and open buffers
-command! FZFMru call fzf#run({
-\ 'source':  reverse(s:all_files()),
-\ 'sink':    'edit',
-\ 'options': '-m -x +s',
-\ 'down':    '40%' })
+let g:fzf_layout = { 'window': '-tabnew' }
 
-function! s:all_files()
-  return extend(
-  \ filter(copy(v:oldfiles),
-  \        "v:val !~ 'fugitive:\\|NERD_tree\\|^/tmp/\\|.git/'"),
-  \ map(filter(range(1, bufnr('$')), 'buflisted(v:val)'), 'bufname(v:val)'))
-endfunction
+" [Buffers] Jump to the existing window if possible
+let g:fzf_buffers_jump = 1
 
-nnoremap <silent> <Leader>t :FZF<CR>
-nnoremap <silent> <Leader>b :FZFBuffers<CR>
-nnoremap <silent> <Leader>B :FZFMru<CR>
-
-" Fix hanging buffer lists
-" See: https://github.com/junegunn/fzf/issues/544
-let g:airline#extensions#branch#enabled = 0
-
-function! s:fzf_statusline()
-  " Override statusline as you like
-  highlight fzf1 ctermfg=161 ctermbg=251
-  highlight fzf2 ctermfg=23 ctermbg=251
-  highlight fzf3 ctermfg=237 ctermbg=251
-  setlocal statusline=%#fzf1#\ >\ %#fzf2#fz%#fzf3#f
-endfunction
-
-autocmd! User FzfStatusLine call <SID>fzf_statusline()
+" Augmenting Ack command using fzf#vim#with_preview function
+"   * fzf#vim#with_preview([[options], preview window, [toggle keys...]])
+"   * Preview script requires Ruby
+"   * Install Highlight or CodeRay to enable syntax highlighting
+"
+"   :Ag  - Start fzf with hidden preview window that can be enabled with "?" key
+"   :Ag! - Start fzf in fullscreen and display the preview window above
+autocmd VimEnter * command! -bang -nargs=* Ack
+  \ call fzf#vim#ag(<q-args>,
+  \                 <bang>0 ? fzf#vim#with_preview('right:50%')
+  \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \                 <bang>0)
