@@ -1,7 +1,7 @@
 " Make nerdtree look nice
 let NERDTreeMinimalUI = 1
 let NERDTreeDirArrows = 1
-let g:NERDTreeWinSize = 25
+let g:NERDTreeWinSize = 20
 let NERDTreeIgnore=['\.class$', '\~$']
 let NERDTreeCascadeSingleChildDir=0
 let NERDTreeCascadeOpenSingleChildDir=0
