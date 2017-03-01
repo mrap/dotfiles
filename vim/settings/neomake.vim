@@ -1,3 +1,4 @@
+let g:neomake_go_enabled_makers = ['go']
 let g:neomake_javascript_enabled_makers = ['eslint']
 let g:neomake_jsx_enabled_makers = ['eslint']
 
