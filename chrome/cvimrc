@@ -1,6 +1,3 @@
-let configpath = '~/.yadr/chrome/cvimrc'
-set localconfig
-
 " Settings
 
 let barposition = "top"
@@ -69,3 +66,5 @@ yankSimpleUrl(link) -> {{
   Status.setMessage(url);
 }}
 
+let configpath = '/Users/MikeRapadas/.yadr/chrome/cvimrc'
+set localconfig
