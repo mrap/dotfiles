@@ -123,6 +123,7 @@
 [core]
   autocrlf = false
   excludesfile = ~/.yadr/git/gitignore
+  ignorecase = false
   pager = diff-so-fancy | less --tabs=2 -RFX
 [advice]
   statusHints = false
