@@ -1,13 +1,8 @@
-# Always have a tmux server
-if ! command tmux info &> /dev/null; then
-  command tmux new -s default -d
-fi
-
 # Improves tmux command so that `tmux` doesn't
 # implicitly create and join an anonymous session.
 # That's annoying and borderline useless.
 # Instead, it joins your latest session and provides better messages
-tmux () {
+tm () {
   # If any arguments given, tmux as usual
   if [ "$#" -gt 0 ]; then
     command tmux "$@"
@@ -29,7 +24,12 @@ tmux () {
   fi
 }
 
-alias tm='tmux'
 alias tmnew='tm new -s '
 alias tmatt='tm attach -t '
 alias tmdet='tm detach'
+
+# Always have a tmux server
+if ! command tmux info &> /dev/null; then
+  command tmux new -s default -d
+fi
+
