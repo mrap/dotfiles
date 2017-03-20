@@ -26,5 +26,4 @@ findreplace () {
   sed -i '' -e "s/$1/$2/g" $(find $dir -type f)
 }
 
-alias git='hub'
 alias RN='react-native'
