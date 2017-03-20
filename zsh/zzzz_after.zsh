@@ -5,8 +5,6 @@ if [ -d $HOME/.zsh.after/ ]; then
   fi
 fi
 
-alias git='hub'
-
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
