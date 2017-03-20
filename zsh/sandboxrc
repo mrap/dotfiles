@@ -1,0 +1,11 @@
+sandbox_init_autojump(){
+  [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+}
+
+# Initializing Nvm is slow, so only run it when node is invoked.
+export NVM_DIR="$HOME/.nvm"
+sandbox_init_nvm(){
+  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+}
+sandbox_hook nvm node
+sandbox_hook nvm npm
