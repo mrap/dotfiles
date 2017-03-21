@@ -22,6 +22,7 @@ task :install => [:submodule_init, :submodules] do
   if want_to_install?('vim configuration (highly recommended)')
     install_files(Dir.glob('{vim}'))
     run %{ ln -nfs "$HOME/.yadr/vim/init.vim" "$HOME/.vimrc"}
+    run %{ mkdir $HOME/.config }
     run %{ ln -nfs "$HOME/.yadr/vim" "$HOME/.config/nvim"}
   end
   install_files(Dir.glob('xvimrc'), :symlink)
