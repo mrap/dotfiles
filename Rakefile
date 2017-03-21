@@ -231,6 +231,7 @@ def install_prezto
 
   # The prezto runcoms are only going to be installed if zprezto has never been installed
   install_files(Dir.glob('zsh/prezto/runcoms/z*'), :symlink)
+  run %{ ln -nfs "$HOME/.yadr/zshrc" "${ZDOTDIR:-$HOME}/.zshrc" }
 
   puts
   puts "Overriding prezto ~/.zpreztorc with YADR's zpreztorc to enable additional modules..."
