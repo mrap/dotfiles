@@ -26,6 +26,7 @@ task :install => [:submodule_init, :submodules] do
     run %{ ln -nfs "$HOME/.yadr/vim" "$HOME/.config/nvim"}
   end
   install_files(Dir.glob('xvimrc'), :symlink)
+  install_hyper_keyboard
 
   Rake::Task["install_prezto"].execute
 
@@ -111,6 +112,14 @@ def install_rvm_binstubs
   puts "======================================================"
   run %{ chmod +x $rvm_path/hooks/after_cd_bundler }
   puts
+end
+
+def install_hyper_keyboard
+  run %{ mkdir -p $HOME/.hammerspoon && ln -nfs "$HOME/.yadr/hyper-hacks/hammerspoon/init.lua" "${ZDOTDIR:-$HOME}/.hammerspoon/init.lua" }
+  run %{ mkdir -p $HOME/.config/karabiner && ln -nfs "$HOME/.yadr/hyper-hacks/karabiner.d/configuration/karabiner.json" "${ZDOTDIR:-$HOME}/.config/karabiner/karabiner.json" }
+  run %{ defaults write -g InitialKeyRepeat -int 15 }
+  run %{ defaults write -g KeyRepeat -int 1 }
+  run %{ defaults write -g ApplePressAndHoldEnabled -bool false }
 end
 
 def install_homebrew
