@@ -117,7 +117,7 @@ end
 def install_hyper_keyboard
   run %{ mkdir -p $HOME/.hammerspoon && ln -nfs "$HOME/.yadr/hyper-hacks/hammerspoon/init.lua" "${ZDOTDIR:-$HOME}/.hammerspoon/init.lua" }
   run %{ mkdir -p $HOME/.config/karabiner && ln -nfs "$HOME/.yadr/hyper-hacks/karabiner.d/configuration/karabiner.json" "${ZDOTDIR:-$HOME}/.config/karabiner/karabiner.json" }
-  run %{ defaults write -g InitialKeyRepeat -int 15 }
+  run %{ defaults write -g InitialKeyRepeat -int 10 }
   run %{ defaults write -g KeyRepeat -int 1 }
   run %{ defaults write -g ApplePressAndHoldEnabled -bool false }
 end
