@@ -150,7 +150,7 @@ def install_homebrew
   run %{brew install neovim/neovim/neovim --HEAD}
   run %{pip install --upgrade neovim}
   run %{pip3 install --upgrade neovim}
-  run %{tic $HOME/.yadr/tmux/xterm-256color-italic.terminfo.txt}
+  run %{tic $HOME/.yadr/tmux/xterm-256color-italic.terminfo}
   puts
   puts
 end
