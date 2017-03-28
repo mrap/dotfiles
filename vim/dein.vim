@@ -6,7 +6,7 @@ set runtimepath+=~/.vim/dein/repos/github.com/Shougo/dein.vim
 if dein#load_state(expand('~/.vim/dein'))
   call dein#begin(expand('~/.vim/dein'))
 
-  call dein#add('Shougo/dein.vim')
+  call dein#add(expand('~/.vim/dein/repos/github.com/Shougo/dein.vim'))
 
   set runtimepath+=~/.vim/dein-plugins
 
