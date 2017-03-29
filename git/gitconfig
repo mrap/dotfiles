@@ -63,6 +63,7 @@
   la = !"git oneline-branches"
   la2 = !"git twoline-branches"
   log-not-pushed = log --branches --not --remotes
+	dag = log --graph --format='format:%C(yellow)%h%C(reset) %C(blue)\"%an\" <%ae>%C(reset) %C(magenta)%cr%C(reset)%C(auto)%d%C(reset)%n%s' --date-order
 
   # pull
   pl = pull                         # pull
