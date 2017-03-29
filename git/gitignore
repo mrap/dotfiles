@@ -21,6 +21,8 @@ Desktop.ini
 TAGS
 !TAGS/
 tags
+tags.lock
+tags.temp
 !tags/
 gtags.files
 GTAGS
