@@ -134,6 +134,7 @@
   mnemonicprefix = true
 	algorithm = patience
   submodule = log
+	indentHeuristic = true
 [fetch]
   recurseSubmodules = on-demand
 [status]
