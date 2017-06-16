@@ -20,8 +20,6 @@ function! HighlightCommentsOnly()
   hi Type ctermfg=NONE guifg=NONE
 endfunction
 
-autocmd Filetype go,java,javascript,javascript.jsx,swift call HighlightCommentsOnly()
-
 " Keep the line number gutter narrow so three digits is cozy.
 set numberwidth=2
 
