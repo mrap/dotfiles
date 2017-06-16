@@ -1,6 +1,7 @@
 syntax on
 
-colorscheme flattened_light
+let g:neosolarized_italic = 1
+colorscheme NeoSolarized
 
 " No tab blocks
 hi SpecialKey ctermbg=NONE guibg=NONE
