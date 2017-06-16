@@ -27,9 +27,3 @@ tm () {
 alias tmnew='tm new -s '
 alias tmatt='tm attach -t '
 alias tmdet='tm detach'
-
-# Always have a tmux server
-if ! command tmux info &> /dev/null; then
-  command tmux new -s default -d
-fi
-
