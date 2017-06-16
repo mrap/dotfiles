@@ -148,6 +148,7 @@ def install_homebrew
   run %{brew install macvim --custom-icons --override-system-vim --with-lua --with-luajit}
   run %{brew install diff-so-fancy}
   run %{brew install neovim/neovim/neovim --HEAD}
+  run %{brew install rg}
   run %{pip install --upgrade neovim}
   run %{pip3 install --upgrade neovim}
   run %{tic $HOME/.yadr/tmux/xterm-256color-italic.terminfo}

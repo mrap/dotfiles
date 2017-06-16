@@ -10,25 +10,30 @@ nnoremap <silent> <Leader>gs :GFiles?<CR>
 nnoremap <silent> <Leader>gl :BCommits<CR>
 nnoremap <silent> <Leader>gL :Commits<CR>
 
-" Shift-tab to see line completions
-if has("nvim")
-  imap <S-Tab> <Plug>(fzf-complete-line)
-endif
+imap <C-p> <Plug>(fzf-complete-line)
 
-let g:fzf_layout = { 'window': '-tabnew' }
+let g:fzf_layout = { 'window': 'enew' }
 
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
 
-" Augmenting Ack command using fzf#vim#with_preview function
-"   * fzf#vim#with_preview([[options], preview window, [toggle keys...]])
-"   * Preview script requires Ruby
-"   * Install Highlight or CodeRay to enable syntax highlighting
-"
-"   :Ag  - Start fzf with hidden preview window that can be enabled with "?" key
-"   :Ag! - Start fzf in fullscreen and display the preview window above
-autocmd VimEnter * command! -bang -nargs=* Ack
-  \ call fzf#vim#ag(<q-args>,
-  \                 <bang>0 ? fzf#vim#with_preview('right:50%')
+" Likewise, Files command with preview window
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>,
+  \                 <bang>0 ? fzf#vim#with_preview('up:60%')
   \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
   \                 <bang>0)
+
+
+let g:rg_command = 'rg --column --line-number --no-heading --color=always '
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1,
+  \                   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \                   <bang>0)
+
+nnoremap <Leader>A :Rg!<space>
+" Ag visual selection
+vnoremap <Leader>a y:Rg! <C-r>=fnameescape(@")<CR><CR>
+" Ag current word
+nnoremap <Leader>a :exec "Rg! " . expand("<cword>")<CR>

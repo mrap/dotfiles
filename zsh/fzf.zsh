@@ -1,5 +1,6 @@
 # Set default command
-export FZF_DEFAULT_COMMAND='ag -l -g ""'
+export FZF_DEFAULT_COMMAND='rg --files --smart-case -g "!{.git,node_modules}/*" 2> /dev/null'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Customize colors
 # https://github.com/junegunn/fzf/wiki/Color-schemes
