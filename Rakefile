@@ -156,6 +156,8 @@ def install_homebrew
   puts "Installing GUI Mac Apps"
   run %{brew tap caskroom/versions}
   run %{brew cask install iterm2-nightly}
+  run %{brew cask install google-chrome}
+  run %{brew cask install google-chrome-canary}
   run %{brew cask install alfred}
   run %{brew cask install dash}
   run %{brew cask install sizeup}
