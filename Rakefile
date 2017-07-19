@@ -153,6 +153,14 @@ def install_homebrew
   run %{pip3 install --upgrade neovim}
   run %{tic $HOME/.yadr/tmux/xterm-256color-italic.terminfo}
   puts
+  puts "Installing GUI Mac Apps"
+  run %{brew tap caskroom/versions}
+  run %{brew cask install iterm2-nightly}
+  run %{brew cask install alfred}
+  run %{brew cask install dash}
+  run %{brew cask install sizeup}
+  run %{brew cask install karabiner-elements}
+  run %{brew cask install hammerspoon}
   puts
 end
 
