@@ -50,13 +50,6 @@ alias ae='vim $yadr/zsh/aliases.zsh' #alias edit
 alias ar='source $yadr/zsh/aliases.zsh'  #alias reload
 alias gar="killall -HUP -u \"$USER\" zsh"  #global alias reload
 
-# vim using
-# mvim --version > /dev/null 2>&1
-# MACVIM_INSTALLED=$?
-# if [ $MACVIM_INSTALLED -eq 0 ]; then
-#   alias vim="mvim -v"
-# fi
-
 # mimic vim functions
 alias :q='exit'
 
