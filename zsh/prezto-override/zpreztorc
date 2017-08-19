@@ -84,7 +84,7 @@ zstyle ':prezto:module:editor' key-bindings 'vi'
 # Auto set to 'off' on dumb terminals.
 export DEFAULT_USER=$(whoami)
 fpath=($HOME/.yadr/zsh/prezto-themes $HOME/.yadr/zsh/prezto-themes/* $HOME/.zsh.prompts $fpath)
-zstyle ':prezto:module:prompt' theme 'mrap'
+zstyle ':prezto:module:prompt' theme 'powerline'
 
 #
 # Screen
