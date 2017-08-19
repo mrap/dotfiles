@@ -25,7 +25,7 @@ command! -bang -nargs=? -complete=dir Files
   \                 <bang>0)
 
 
-let g:rg_command = 'rg --column --line-number --no-heading --color=always '
+let g:rg_command = 'rg --smart-case --column --line-number --no-heading --color=always '
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(g:rg_command .shellescape(<q-args>), 1,
   \                   <bang>0 ? fzf#vim#with_preview('up:60%')
