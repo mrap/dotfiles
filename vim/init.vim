@@ -41,7 +41,7 @@ let mapleader = "\<Space>"
 noremap , :
 
 " Easier q
-nnoremap <Leader>q :q<CR>
+nnoremap <Leader>q :Sayonara<CR>
 nnoremap <Leader>Q :qa<CR>
 
 " ================ Turn Off Swap Files ==============
