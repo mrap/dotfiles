@@ -15,7 +15,7 @@ pmodload 'helper'
 
 # Define variables.
 _prompt_mrap_current_bg='NONE'
-_prompt_mrap_segment_separator='⮀'
+_prompt_mrap_segment_separator=''
 
 function prompt_mrap_start_segment {
   local bg fg
