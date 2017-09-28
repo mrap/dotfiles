@@ -9,5 +9,5 @@ let NERDTreeCascadeOpenSingleChildDir=0
 " Automatically delete buffer of a file you just deleted
 let NERDTreeAutoDeleteBuffer = 1
 
-nmap <TAB> <plug>NERDTreeTabsToggle<CR>
-nmap <S-TAB> :NERDTreeFind<CR>
+nmap <Leader>n <plug>NERDTreeTabsToggle<CR>
+nmap <Leader>N :NERDTreeFind<CR>
