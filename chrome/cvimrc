@@ -66,5 +66,5 @@ yankSimpleUrl(link) -> {{
   Status.setMessage(url);
 }}
 
-let configpath = '/Users/MikeRapadas/.yadr/chrome/cvimrc'
+let configpath = '/Users/mrap/.yadr/chrome/cvimrc'
 set localconfig
