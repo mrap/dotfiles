@@ -162,6 +162,7 @@ def install_homebrew
   run %{brew cask install sizeup}
   run %{brew cask install karabiner-elements}
   run %{brew cask install hammerspoon}
+  run %{brew cask install fluor}
   puts
 end
 
