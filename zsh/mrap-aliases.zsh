@@ -16,6 +16,7 @@ pbcopyfile () {
 }
 
 alias bcask='brew cask'
+alias bsearch='brew search'
 
 findreplace () {
   if [ $# -lt 2 ]; then
