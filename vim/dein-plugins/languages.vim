@@ -1,6 +1,6 @@
 call dein#add('alvan/vim-closetag')
 call dein#add('briancollins/vim-jst')
-call dein#add('carlitux/deoplete-ternjs', { 'depends': ['deoplete', 'tern_for_vim'] })
+call dein#add('carlitux/deoplete-ternjs', { 'build': 'npm install -g tern', 'depends': ['deoplete', 'tern_for_vim'] })
 call dein#add('derekwyatt/vim-fswitch')
 call dein#add('derekwyatt/vim-scala')
 call dein#add('digitaltoad/vim-jade')
