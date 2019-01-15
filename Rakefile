@@ -143,7 +143,7 @@ def install_homebrew
   puts "======================================================"
   puts "Installing Homebrew packages...There may be some warnings."
   puts "======================================================"
-  run %{brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher noti python python3}
+  run %{brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher noti python2 python3}
   run %{pip2 install powerline-status}
   run %{brew install diff-so-fancy}
   run %{brew install neovim --HEAD}
