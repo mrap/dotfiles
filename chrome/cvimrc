@@ -53,6 +53,13 @@ map <C-l> goForward
 let vimcommand="mvim -f"
 imap <C-o> editWithVim
 
+closeAllOtherTabs() -> {{
+  Mappings.actions.closeTabsToRight()
+  Mappings.actions.closeTabsToLeft()
+}}
+
+map co :call closeAllOtherTabs<CR>
+
 " Yank current url without any params or anchors
 yankSimpleUrl(link) -> {{
   if (!link) link = window.location;
