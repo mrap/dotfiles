@@ -26,7 +26,7 @@ task :install => [:submodule_init, :submodules] do
     run %{ ln -nfs "$HOME/.yadr/vim" "$HOME/.config/nvim"}
   end
   install_files(Dir.glob('xvimrc'), :symlink)
-  install_hyper_keyboard
+  Rake::Task["install_hyper_keyboard"].execute
 
   Rake::Task["install_prezto"].execute
 
@@ -37,6 +37,12 @@ task :install => [:submodule_init, :submodules] do
   run_bundle_config
 
   success_msg("installed")
+end
+
+task :install_hyper_keyboard do
+  if want_to_install?('hyper keyboard via hammerspoon')
+    install_hyper_keyboard
+  end
 end
 
 task :install_prezto do
@@ -115,7 +121,7 @@ def install_rvm_binstubs
 end
 
 def install_hyper_keyboard
-  run %{ mkdir -p $HOME/.hammerspoon && ln -nfs "$HOME/.yadr/hyper-hacks/hammerspoon/init.lua" "${ZDOTDIR:-$HOME}/.hammerspoon/init.lua" }
+  run %{ mkdir -p $HOME/.hammerspoon && ln -nfs $HOME/.yadr/hyper-hacks/hammerspoon/*.lua ${ZDOTDIR:-$HOME}/.hammerspoon }
   run %{ mkdir -p $HOME/.config/karabiner && ln -nfs "$HOME/.yadr/hyper-hacks/karabiner.d/configuration/karabiner.json" "${ZDOTDIR:-$HOME}/.config/karabiner/karabiner.json" }
   run %{ defaults write -g InitialKeyRepeat -int 15 }
   run %{ defaults write -g KeyRepeat -int 1 }
