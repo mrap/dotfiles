@@ -2,6 +2,9 @@ source $HOME/.yadr/zsh/prezto/runcoms/zshrc
 
 for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
 
+# Python
+export PATH="/usr/local/opt/python@2/bin:$PATH"
+
 # Go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
@@ -25,3 +28,6 @@ fi
 export PATH="$PATH:$HOME/.rvm/bin"
 
 alias git='hub'
+
+# Fix Python Error: "Invalid dylib load. Clients should not load the unversioned libcrypto dylib as it does not have a stable ABI"
+export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/opt/openssl@1.1/lib

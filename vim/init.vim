@@ -32,6 +32,12 @@ set autoread                    "Reload files changed outside vim
 " http://items.sjbach.com/319/configuring-vim-right
 set hidden
 
+" You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
+
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
 " Change leader to <Space> because the backslash is too far away
 " That means all \x commands turn into <Space>x
 " The mapleader has to be set before we load any plugins
@@ -135,7 +141,7 @@ nnoremap K i<cr><esc>k$
 
 " Neovim python support
 if has("nvim")
-  let g:python_host_prog = '/usr/local/bin/python2'
+  let g:python_host_prog = '/usr/local/opt/python@2/bin/python2'
   let g:python3_host_prog = '/usr/local/bin/python3'
 endif
 
