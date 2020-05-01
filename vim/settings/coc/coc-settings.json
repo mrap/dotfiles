@@ -6,7 +6,19 @@
     "typescriptreact",
     "json",
     "javascriptreact",
+    "typescript.tsx",
+    "css",
+    "markdownlint"
+  ],
+  "eslint.filetypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "javascriptreact",
     "typescript.tsx"
   ],
-  "eslint.filetypes": ["javascript", "typescript", "typescriptreact", "javascriptreact", "typescript.tsx"]
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "all",
+  "prettier.jsxBracketSameLine": false,
+  "prettier.disableSuccessMessage": true
 }
