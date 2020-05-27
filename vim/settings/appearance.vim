@@ -1,7 +1,8 @@
 syntax on
 
 let g:neosolarized_italic = 1
-colorscheme deep-space
+colorscheme NeoSolarized
+set bg=light
 
 " No tab blocks
 hi SpecialKey ctermbg=NONE guibg=NONE
