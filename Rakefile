@@ -149,7 +149,14 @@ def install_homebrew
   puts "======================================================"
   puts "Installing Homebrew packages...There may be some warnings."
   puts "======================================================"
-  run %{brew install zsh ctags git hub tmux reattach-to-user-namespace the_silver_searcher noti python}
+  run %{brew install zsh}
+  run %{brew install ctags}
+  run %{brew install git}
+  run %{brew install hub}
+  run %{brew install tmux}
+  run %{brew install reattach-to-user-namespace}
+  run %{brew install the_silver_searcher}
+  run %{brew install noti python}
   run %{brew install 'https://raw.githubusercontent.com/Homebrew/homebrew-core/86a44a0a552c673a05f11018459c9f5faae3becc/Formula/python@2.rb'}
   run %{pip2 install powerline-status}
   run %{brew install diff-so-fancy}
