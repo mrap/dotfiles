@@ -160,7 +160,7 @@ def install_homebrew
   run %{tic $HOME/.yadr/tmux/xterm-256color-italic.terminfo}
   puts
   puts "Installing GUI Mac Apps"
-  run %{brew tap caskroom/versions}
+  run %{brew tap homebrew/cask-versions}
   run %{brew cask install iterm2-nightly}
   run %{brew cask install google-chrome}
   run %{brew cask install google-chrome-canary}
