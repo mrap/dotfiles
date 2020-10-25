@@ -31,3 +31,10 @@ alias git='hub'
 
 # Fix Python Error: "Invalid dylib load. Clients should not load the unversioned libcrypto dylib as it does not have a stable ABI"
 export DYLD_FALLBACK_LIBRARY_PATH=/usr/local/opt/openssl@1.1/lib
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi

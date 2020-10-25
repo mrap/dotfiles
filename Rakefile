@@ -162,9 +162,28 @@ def install_homebrew
   run %{brew install diff-so-fancy}
   run %{brew install neovim --HEAD}
   run %{brew install rg}
-  run %{pip install --upgrade pynvim}
-  run %{pip2 install --upgrade pynvim}
   run %{tic $HOME/.yadr/tmux/xterm-256color-italic.terminfo}
+  run %{tic $HOME/.yadr/tmux/tmux-256color.terminfo}
+
+  puts
+  puts "Setup Python environments for Neovim with pyenv"
+  # Source: https://blog.cuffaro.com/blog/2018/04/16/pyenv-neovim
+  # Instead of
+  #   pip install neovim
+  #   pip install pyvim
+  # https://github.com/neovim/neovim/wiki/Following-HEAD#20181118
+  run %{brew install pyenv}
+  run %{brew install pyenv-virtualenv}
+  run %{pyenv install 2.7.18}
+  run %{pyenv install 3.8.16}
+  run %{pyenv virtualenv 2.7.18 neovim2}
+  run %{pyenv virtualenv 3.8.16 neovim3}
+  run %{pyenv activate neovim2}
+  run %{pip install --upgrade pyvim}
+  run %{pyenv activate neovim3}
+  run %{pip install --upgrade pyvim}
+  run %{pyenv activate --unset}
+
   puts
   puts "Installing GUI Mac Apps"
   run %{brew tap homebrew/cask-versions}
