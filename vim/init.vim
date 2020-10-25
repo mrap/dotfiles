@@ -154,3 +154,7 @@ noremap <Up> <nop>
 noremap <Down> <nop>
 noremap <Left> <nop>
 noremap <Right> <nop>
+
+" Resize splits after window resize
+" Source: https://vi.stackexchange.com/a/206/6736
+autocmd VimResized * wincmd =
