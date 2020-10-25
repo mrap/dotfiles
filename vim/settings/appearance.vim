@@ -28,6 +28,12 @@ set numberwidth=2
 if has("nvim")
   let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
+  " Blinking cursor
+  set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
+        \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
+        \,sm:block-blinkwait175-blinkoff150-blinkon175
+
+
   if has("termguicolors")
     let $NVIM_TUI_ENABLE_TRUE_COLOR=1
     set termguicolors
