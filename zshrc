@@ -8,6 +8,8 @@ export PATH="/usr/local/opt/python@2/bin:$PATH"
 # Go
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOROOT/bin
 
 # Android
 export ANDROID_HOME=/usr/local/opt/android-sdk
