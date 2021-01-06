@@ -175,9 +175,9 @@ def install_homebrew
   run %{brew install pyenv}
   run %{brew install pyenv-virtualenv}
   run %{pyenv install 2.7.18}
-  run %{pyenv install 3.8.16}
+  run %{pyenv install 3.8.6}
   run %{pyenv virtualenv 2.7.18 neovim2}
-  run %{pyenv virtualenv 3.8.16 neovim3}
+  run %{pyenv virtualenv 3.8.6 neovim3}
   run %{pyenv activate neovim2}
   run %{pip install --upgrade pyvim}
   run %{pyenv activate neovim3}
