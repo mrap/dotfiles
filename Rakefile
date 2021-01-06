@@ -187,15 +187,15 @@ def install_homebrew
   puts
   puts "Installing GUI Mac Apps"
   run %{brew tap homebrew/cask-versions}
-  run %{brew cask install iterm2-nightly}
-  run %{brew cask install google-chrome}
-  run %{brew cask install google-chrome-canary}
-  run %{brew cask install alfred}
-  run %{brew cask install dash}
-  run %{brew cask install sizeup}
-  run %{brew cask install karabiner-elements}
-  run %{brew cask install hammerspoon}
-  run %{brew cask install fluor}
+  run %{brew install --cask iterm2-nightly}
+  run %{brew install --cask google-chrome}
+  run %{brew install --cask google-chrome-canary}
+  run %{brew install --cask alfred}
+  run %{brew install --cask dash}
+  run %{brew install --cask sizeup}
+  run %{brew install --cask karabiner-elements}
+  run %{brew install --cask hammerspoon}
+  run %{brew install --cask fluor}
   puts
 end
 
