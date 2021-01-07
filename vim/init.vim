@@ -158,3 +158,6 @@ noremap <Right> <nop>
 " Resize splits after window resize
 " Source: https://vi.stackexchange.com/a/206/6736
 autocmd VimResized * wincmd =
+
+" Open :h in a vertical split
+autocmd FileType help wincmd H
