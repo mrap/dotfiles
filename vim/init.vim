@@ -161,3 +161,6 @@ autocmd VimResized * wincmd =
 
 " Open :h in a vertical split
 autocmd FileType help wincmd H
+
+" Open file in its own tab
+nnoremap <Leader>e :tabedit %<CR>
