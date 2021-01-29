@@ -41,6 +41,9 @@ fi
 # show me files matching "ls grep"
 alias lsg='ll | grep'
 
+# Sort files by size
+alias lssz='ll -S'
+
 # Alias Editing
 TRAPHUP() {
   source $yadr/zsh/aliases.zsh
