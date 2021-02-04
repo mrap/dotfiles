@@ -164,3 +164,6 @@ autocmd FileType help wincmd H
 
 " Open file in its own tab
 nnoremap <Leader>e :tabedit %<CR>
+
+" Ctrl-a brings edit cursor to append after the next word
+inoremap <C-a> <esc>wa
