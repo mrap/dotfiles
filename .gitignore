@@ -9,7 +9,6 @@ vim/spell
 vim/after/.vimrc.after
 vim/autoload/*
 vim/dein/*
-!vim/dein/Shougo/dein.vim
 vim/sessions
 .netrwhist
 bin/subl
