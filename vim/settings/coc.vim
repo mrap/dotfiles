@@ -10,6 +10,7 @@ let g:coc_global_extensions = [
       \ 'coc-eslint',
       \ 'coc-angular',
       \ 'coc-prettier',
+      \ 'coc-java',
       \ 'coc-json',
       \ 'coc-go',
       \ ]
