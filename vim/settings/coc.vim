@@ -8,6 +8,7 @@ let g:coc_global_extensions = [
       \ 'coc-pairs',
       \ 'coc-tsserver',
       \ 'coc-eslint',
+      \ 'coc-angular',
       \ 'coc-prettier',
       \ 'coc-json',
       \ 'coc-go',
